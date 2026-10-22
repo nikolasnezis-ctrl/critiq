@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head><title>My Game</title></head>
-<body style="text-align:center;font-family:sans-serif">
+<head>
+  <meta charset="UTF-8">
+  <title>My Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
   <h1>Click the Target!</h1>
   <p>Score: <span id="score">0</span></p>
-  <button id="target" style="position:absolute;padding:20px">🎯</button>
-  <script>
-    let score = 0;
-    const t = document.getElementById("target");
-    function move() {
-      t.style.left = Math.random() * (innerWidth - 80) + "px";
-      t.style.top = Math.random() * (innerHeight - 80) + "px";
-    }
-    t.onclick = () => { score++; document.getElementById("score").textContent = score; move(); };
-    move();
-  </script>
+  <button id="target">🎯</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
